@@ -1,0 +1,16 @@
+<div class="container-fluid bg-primary">
+    <div class="row">
+        <div *ngFor="let item of musicsList; let i=index" class="col-md-4 text-center">
+            <div class="card me-2 ms-3 mb-4 text-center" style="width: 22Nrem;">
+                <img [src]="item.image_url" class="card-img-top img-fluid" alt="...">
+                <div class="card-body">
+                  <h5 style="color: white;" class="card-title">{{item.title}}</h5>
+                  <p class="card-text">{{item.description}}</p>
+                  <button (click)="routeToPlayer(i)" class="btn btn-dark text-light">
+                      Play
+                    </button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
